@@ -33,7 +33,7 @@
 ```
 
 Подробнее о подключении доп модулей читайте [тут](https://code.visualstudio.com/docs/python/editing).  
-Примеры использования заглушек смотрите [тут](https://github.com/BIMOpenGroup/revitapistubs/examples).  
+Примеры использования заглушек смотрите [тут](https://github.com/BIMOpenGroup/RevitAPIStubs/tree/master/examples).  
 Для максимальной эффектиности заглушек их надо допиливать руками, но об этом подробней в примерах.  
 Надеюсь в будущем это будет исправлено.
 
@@ -68,7 +68,7 @@
 - Делаем `pull request` в `upstream/master`.
 
 Правила именования веток:
-- Стиль cebab-case;
+- Стиль kebab-case;
 - Первым словом идёт задача fix/feature/refactor и т.д. Последующими краткое описание либо номер issue.
     fix-iss57 / feature-iss14 / refactor-generator.
 
