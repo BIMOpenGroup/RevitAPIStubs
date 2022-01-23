@@ -14,7 +14,7 @@
 В `revit` хранятся заглушки для нескольких версий библиотек `Revit API`.  
 Чтобы не было конфликтов у анализатора кода, подключать заглушки надо с помощью двух путей.
 ```json
-// global settings.json
+// %APPDATA%\Code\User\settings.json
 "python.analysis.extraPaths": [
     "ВАШ_ПУТЬ\\stubs\\common",
     "ВАШ_ПУТЬ\\stubs\\revit\\2019"
