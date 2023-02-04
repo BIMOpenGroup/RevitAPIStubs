@@ -12,13 +12,13 @@ clr.Add
 `Pylance` постоянно пытается это делать во время того, как вы пишете код. Убедиться в этом очень просто.  
 Напишем такую строку `text = "asdf"`. Если навести мышь на переменную `text` и подождать, либо поставить курсор на переменную и нажать `ctrl + k, ctrl + i`, то вы увидите окно с надписью.
 ```py
-text = "asdf"  # (veriable) text: Literal['asdf']
+text = "asdf"  # (variable) text: Literal['asdf']
 ```
 
 То же самое работает для переменных цикла:
 ```py
 for text in ['qwer', 'asdf', 'zxcv']:
-    print(text)  # (veriable) text: str
+    print(text)  # (variable) text: str
 ```
 
 И для функций:
@@ -26,7 +26,7 @@ for text in ['qwer', 'asdf', 'zxcv']:
 def get_text():
     return 'some_text'
 
-text = get_text()  # (veriable) text: Literal['some_text']
+text = get_text()  # (variable) text: Literal['some_text']
 ```
 
 Из-за того, что у переменной `text` определён тип, нам удобнее с ней работать.
@@ -53,7 +53,7 @@ Vscode не знает, что возвращает метод `OfClass`, поэ
 ```py
 views = DB.FilteredElementCollector(doc) \
     .OfClass(DB.View3D) \
-    .WhereElementIsElementType()  # (veriable) views: FilteredElementCollector
+    .WhereElementIsElementType()  # (variable) views: FilteredElementCollector
 ```
 
 Используя views дальше в коде, мы можем обращаться к методам коллектора, удобно же.
@@ -63,7 +63,7 @@ views = DB.FilteredElementCollector(doc) \
 # "FilteredElementCollector" is not iterable
 # "__iter__" method does not return an objectPylancereportGeneralTypeIssues
 for el in views:
-    print(el)  # (veriable) el: Unknown
+    print(el)  # (variable) el: Unknown
 ```
 
 Первую проблему можно решить изменив `pass` в методе `__iter__` на `return iter()`.  
@@ -89,6 +89,6 @@ number = 10  # type: int
 Как уже было написано выше, способы решения проблемы
 ```py
 for el in views:
-    print(el)  # (veriable) el: Unknown
+    print(el)  # (variable) el: Unknown
 ```
 смотрите в модулях данной папки.
